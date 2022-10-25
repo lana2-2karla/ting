@@ -1,15 +1,21 @@
+from collections import deque
+
 class Queue:
     def __init__(self):
-        """Inicialize sua estrutura aqui"""
+        self._data = deque()
 
     def __len__(self):
-        """Aqui irá sua implementação"""
+        return len(self._data)
 
     def enqueue(self, value):
-        """Aqui irá sua implementação"""
+         self._data.append(value)    
 
     def dequeue(self):
-        """Aqui irá sua implementação"""
+        return self._data.popleft()
 
     def search(self, index):
-        """Aqui irá sua implementação"""
+        if index < 0:
+            raise IndexError('invalid index')
+        return self._data[index]
+
+# ref: https://www.otaviomiranda.com.br/2020/filas-em-python-com-deque-queue/
