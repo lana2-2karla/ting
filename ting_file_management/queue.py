@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Queue:
     def __init__(self):
         self._data = deque()
@@ -8,7 +9,7 @@ class Queue:
         return len(self._data)
 
     def enqueue(self, value):
-         self._data.append(value)    
+        self._data.append(value)
 
     def dequeue(self):
         return self._data.popleft()
