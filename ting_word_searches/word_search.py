@@ -19,7 +19,7 @@ def exists_word(word: str, instance: Queue):
     return ocorrencias_info
 
 
-def search_by_word(word, instance):
+def search_by_word(word: str, instance: Queue):
     ocorrencias_info = []
     for item in range(len(instance)):
         file = instance.search(item)
